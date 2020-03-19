@@ -94,7 +94,7 @@ jobs:
           EOF
           # 固件压缩:
           cat >> .config <<EOF
-          # CONFIG_TARGET_IMAGES_GZIP=y
+          CONFIG_TARGET_IMAGES_GZIP=y
           CONFIG_TARGET_ROOTFS_TARGZ=y
           EOF
           #根文件系统
@@ -107,7 +107,6 @@ jobs:
           CONFIG_TARGET_SQUASHFS_BLOCK_SIZE=256
           CONFIG_TARGET_UBIFS_FREE_SPACE_FIXUP=y
           CONFIG_TARGET_UBIFS_JOURNAL_SIZE=""
-          CONFIG_TARGET_IMAGES_GZIP=y
           EOF
           #系统文件系统大小
           cat >> .config <<EOF
